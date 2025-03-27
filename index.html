@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Me in Casablanca Films</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: #0d0d0d url('https://www.transparenttextures.com/patterns/black-linen.png');
+      color: #f0e5c9;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.7)), url('https://images.unsplash.com/photo-1583337130417-3346a1ce5d0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      letter-spacing: 0.1rem;
+    }
+    .script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      margin-top: 0.5rem;
+    }
+    .cta-button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #0d0d0d;
+      background-color: #f0e5c9;
+      border: 2px solid #f0e5c9;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: transparent;
+      color: #f0e5c9;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 1s ease-in;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: 4px solid #f0e5c9;
+      box-shadow: 0 0 10px rgba(240, 229, 201, 0.2);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .testimonial {
+      font-style: italic;
+      margin: 2rem 0;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="script">meet me in</div>
+    <h1>CASABLANCA</h1>
+    <div class="script">wedding films</div>
+    <button class="cta-button" onclick="document.getElementById('films').scrollIntoView({behavior: 'smooth'})">Watch our work</button>
+  </header>
+
+  <section>
+    <h2>A love letter in motion</h2>
+    <p>We craft timeless wedding films that capture the essence of your love story—cinematic, intimate, and unforgettable.</p>
+  </section>
+
+  <section id="films">
+    <h2>Featured films</h2>
+    <div class="portfolio-grid">
+      <div>
+        <iframe src="https://player.vimeo.com/video/1068454464" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://player.vimeo.com/video/1068454794" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://player.vimeo.com/video/1068455072" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we offer</h2>
+    <ul>
+      <li>Full wedding films</li>
+      <li>Teasers & highlights</li>
+      <li>Destination weddings</li>
+      <li>Elopements</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kind words</h2>
+    <p class="testimonial">“Watching our wedding film felt like watching the greatest love story ever told—our own.”<br>– Sofia & James</p>
+  </section>
+
+  <section>
+    <h2>Let’s make something beautiful</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button class="cta-button" type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Meet Me in Casablanca Films — All rights reserved
+  </footer>
+</body>
+</html>
